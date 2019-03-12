@@ -1,5 +1,8 @@
 # Introduction
-Have you ever wanted to create an operating system, but you didn't know where to start? Well, congratulations, because you just found a tutorial that will tteach you x86 16 bit assembly code, and one day you will be able to create your own operating system!
+Have you ever wanted to create an operating system, but you didn't know where to start? Well, congratulations, because you just found a tutorial that will teach you x86 16 bit assembly code, and one day you will be able to create your own operating system!
+
+Why will we use assembly? Because it isn't hard to execute in a computer, is almost the most direct way to communicate with a computer, and being 16 bit assembly means our O.S. will be executable in any Intel computer (since the 8086 CPU, released in 1979).
+Maybe in one future we learn how to load a high level language code like C and make the code more understandable.
 
 ## What you will learn
 
