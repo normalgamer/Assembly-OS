@@ -6,18 +6,12 @@ Maybe in one future we learn how to load a high level language code like C and m
 
 ## What you will learn
 
-·Making your own bootloader.
-
-·Creating functions to print text.
-
-·Get user input.
-
-·Loading disk sectors to load your whole O.S.
+- Making your own bootloader.
+- Creating functions to print text.
+- Get user input.
+- Loading disk sectors to load your whole O.S.
 
 In a future:
-
-·Creating files and folders from assembly.
-
-·Creating an assembly compiler inside the O.S.
-
-·Loading a C kernel.
+- Creating files and folders from assembly.
+- Creating an assembly compiler inside the O.S.
+- Loading a C kernel.
