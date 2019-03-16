@@ -4,7 +4,7 @@ Have you ever wanted to create an operating system, but you didn't know where to
 Why will we use assembly? Because it isn't hard to execute in a computer, is almost the most direct way to communicate with a computer, and being 16 bit assembly means our O.S. will be executable in any Intel computer (since the 8086 CPU, released in 1979).
 Maybe in one future we learn how to load a high level language code like C and make the code more understandable.
 
-This tutorial is meant to be followed in order. If you jump to the 3rd chapter and don't know what `mov ah, 0x0E` you will not understand anything. Try to understand what each line means; copy-pasting will not teach you anything.
+This tutorial is meant to be followed in order. If you jump to the 3rd chapter and don't know what `mov ah, 0x0E` means you will not understand anything. Try to understand what each line means; copy-pasting will not teach you anything.
 
 ## What you will learn
 
