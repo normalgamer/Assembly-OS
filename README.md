@@ -14,3 +14,4 @@ Loading disk sectors to load your whole O.S.
 In a future:
 Creating files and folders from assembly.
 Creating an assembly compiler inside the O.S.
+Loading a C kernel.
