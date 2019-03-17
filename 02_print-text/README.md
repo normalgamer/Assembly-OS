@@ -9,7 +9,7 @@ Quick lesson: ``ah`` and ``al`` are two 8-bit registers, which are the High byte
 
 First we will set ``ax`` to ``0x0E`` to tell the BIOS "write contents of ``al`` in teletype mode". Then we will store a character in ``al`` with ``mov`` and call ``int 0x10``.
 
-Let`s take a look at the code:
+Let's take a look at the code:
 ```
 mov ah, 0x0E          ; Teletype mode
 mov al, 'X'           ; Store 'X' character in al to print it
