@@ -1,7 +1,7 @@
 # Printing text
 Our bootsector is amazing, but it would be great if we could print some text in the screen. We will use a BIOS interrupt for that.
 
-BIOS interrupts are routines that interrupt our code and jump to the BIOS to do stuff like reading more sectors, printing text... We will use the print interrupt `` int 00x10`` to print text.
+BIOS interrupts are routines that interrupt our code and jump to the BIOS to do stuff like reading more sectors, printing text... We will use the print interrupt `` int 0x10`` to print text.
 
 When we call ``int 0x10``, the BIOS will check in ah to specify the printing function and then it will print the contents of al
 
