@@ -55,10 +55,15 @@ dw 0xAA55
 ```
 Let's explain this monstruosity.
 ``[org 0x7C00]`` is used to tell the assembler where are we loaded in RAM. When the computer starts, the BIOS will tell load us in RAM address 0x7C00, so we need to tell the assembler to organize our code to start from that address. If you skip it, your print string will read from a different location the string.
+
 ``mov si, hello_world`` is probably the most difficult part to understand. The ``si`` register is the source index register, and is used to point to a memory location, in this case to the memory loaction our string is defined.
+
 ``call print_string`` just calls our printing function.
+
 ``lodsb`` loads the first byte of the address ``si`` is pointing to (our string) into ``al``.
+
 After that our code compares if the character in ``al`` equals zero (end of the string). If it does, it will jump to done, and from there it will RETurn to where the function was called.
+
 If the character in ``al`` doesn't equal zero (there are still bytes to be printed), we will call ``in 0x10`` to print the character, and then we will jump to loop, to repeat the process. This time, lodsb will load the next byte of the string.
 
 If you want, you can save the print_string function on a separate file, and in your main bootsector file write ``%include "print_string.asm"`` before ``times 510-($-$$) db 0``. The compiler will compile it with the bootsector.
