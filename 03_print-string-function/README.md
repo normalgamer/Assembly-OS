@@ -1,15 +1,15 @@
 # Improving our print string
 
-We know how to print text in the screen, but it's a bit tedious to constantly load into al the char we want to print, so we are going to create a function for it.
-## Strings
+Printing characters is cool, but it is better to print a whole sentence without printing individually every character
 
+## Strings
 To define a string, we use db (define byte) to store our string in bytes, and then we add a zero to know where our string ends:
 
 ``my_string db 'Hello World', 0``
 
 ## Calling functions
-
 To call a function, we write call and the name of our function. ``call print_string``
+
 ## Comparations
 
 To compare data stored in registers, we use cmp, and then we use another instruction to jump to a point in memory depending on the result.
@@ -29,7 +29,6 @@ done:
   jmp $         ; Infinite loop
 ```
 # Writing our print_string function
-
 We will use new instructions here, lodsb and ret, plus a new register, si
 ```
 [org 0x7C00]
@@ -48,12 +47,14 @@ print_string:
   .done:
     ret
     
+  jmp $
+    
 hello_world db 'Hello World', 0
 times 510-($-$$) db 0
 dw 0xAA55
 ```
 
-Let's explain this monstruosity. ``[org 0x7C00]`` is used to tell the assembler where are we loaded in RAM. When the computer starts, the BIOS will tell load us in RAM address 0x7C00, so we need to tell the assembler to organize our code to start from that address. If you skip it, your print string will read from a different location the string.
+Let's explain this monstruosity. ``[org 0x7C00]`` is used to tell the assembler where are we loaded in RAM. When the computer starts, the BIOS will load us in RAM address 0x7C00, so we need to tell the assembler to organize our code to start from that address. If you skip it, your print_string function will read the string from a different location.
 
 ``mov si, hello_world`` is probably the most difficult part to understand. The si register is the source index register, and is used to point to a memory location, in this case to the memory loaction our string is defined.
 
