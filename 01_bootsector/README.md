@@ -15,7 +15,7 @@ Let's take a look at it. The first three bytes perform an infinite jump, and the
 You could write all those bytes in binary, but assembly language was created to solve this:
 ```
 jmp $
-times 510-($-$$)
+times 510-($-$$) db 0
 dw 0xAA55
 ```
 
@@ -26,7 +26,7 @@ loop:
 ```
 The ``jmp $`` instruction means "jump to the current address", creating an infinite loop as the example above.
 
-The next instruction is used to tell the assembler to fill the rest of the bootsector with zeroes, minus the size of the previous code.
+The next instruction is used to tell the assembler to fill the rest of the bootsector with zeroes, minus the last two bytes (it's a bit more complicated, you can google it to find more about it).
 And the last instruction is "define word", which writes a double byte, our boot signature.
 
 If you're anxious to try it, run the following two commands to compile and run the bootsector.
