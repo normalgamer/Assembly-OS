@@ -5,7 +5,8 @@ start:
   call print_string
   
 ; Functions 
-; Alternatively you can store the print_string function in a new file called print_string.asm and include it before the 'times 510-($-$$) db 0' instruction
+; Alternatively you can store the print_string function in a new file called print_string.asm and include it before the 
+; 'times 510-($-$$) db 0' instruction
 
 print_string:         ; Beginning of our function
   mov ah, 0x0E        ; tty
