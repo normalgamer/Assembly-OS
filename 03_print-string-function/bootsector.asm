@@ -1,4 +1,3 @@
-```
 [org 0x7C00]          ; Tell the assembler where will we be loaded
 
 start:
@@ -25,4 +24,3 @@ hello_world db 'Hello World', 0
 
 times 510-($-$$) db 0
 dw 0xAA55
-```
